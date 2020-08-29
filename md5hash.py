@@ -21,8 +21,6 @@ parser.add_argument("-M", "--md5hash", help="your generated md5hash value here")
 parser.add_argument("-V", "--verbose", action="store_true", help="for verbose mode")
 args = parser.parse_args()
 
-start = time.time()
-
 # Function for generating md5hash
 def md5hash_generating():
     if args.salt == 2:
@@ -50,6 +48,7 @@ if os.path.exists(default_wordlist):
 else:
     wordlist = args.wordlist
 
+start = time.time()
 # Function for cracking md5hash
 def crack():
     try:
