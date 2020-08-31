@@ -45,7 +45,8 @@ default_wordlist = '/usr/share/wordlists/rockyou.txt'
 if os.path.exists(default_wordlist):
     if not args.wordlist:
         wordlist = default_wordlist
-else:
+        
+if args.wordlist:
     wordlist = args.wordlist
 
 start = time.time()
