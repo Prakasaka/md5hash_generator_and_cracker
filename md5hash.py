@@ -10,6 +10,7 @@ import argparse
 def red(red): return f"\033[1;31m{red}\033[0m"
 def green(green): return f"\033[1;32m{green}\033[0m"
 def yellow(yellow): return f"\033[1;33m{yellow}\033[0m"
+def blue(blue): return f"\033[1;34m{blue}\033[0m"
 def bold(bold): return f"\033[1m{bold}\033[0m"
 
 # Arguments
