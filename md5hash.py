@@ -62,7 +62,10 @@ def crack():
                     break
                 if args.verbose:
                     print(red(f"[✕] Wrong - {word_list}"))
+            if hashlib.md5(word_list.encode('latin-1')).hexdigest() != args.md5hash:
+                print(blue(f"Not Found In [{wordlist}] Try Diffrent Wordlist"))
     except FileNotFoundError:
         print(red("✕ Give me valid wordlist file path ✕"))
 
 crack()
+
